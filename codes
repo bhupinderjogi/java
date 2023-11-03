@@ -3,32 +3,38 @@
   
 interface Department
 {
-int m1=18,m2=19,m3=12;
+    int m1 = 18;
+    int m2 = 19;
+    int m3 = 12;
 }
+
 interface Exam extends Department
 {
-int s1=67,s2=45,s3=71;
-void total_marks();
+    int s1 = 67;
+    int s2 = 45;
+    int s3 = 71;
+    void total_marks();
 }
-class Student_inter implements Department,Exam
-{
-public void total_marks()
-{
 
-int ds,cg,dlca
-ds=m1+s1;
-cg=m2+s2;
-dlca=m3+s3;
-System.out.println("Marks of DS"+ds);
-System.out.println("Marks of CG"+cg);
-System.out.println("Marks of DLCA"+dlca);
-}
-public static void main(String args[])
+class Student_inter implements Department, Exam
 {
-Student_inter s=new Student_inter();
-s.total_marks();
+    public void total_marks()
+    {
+        int ds = m1 + s1;
+        int cg = m2 + s2;
+        int dlca = m3 + s3;
+        System.out.println("Marks of DS: " + ds);
+        System.out.println("Marks of CG: " + cg);
+        System.out.println("Marks of DLCA: " + dlca);
+    }
+
+    public static void main(String args[])
+    {
+        Student_inter s = new Student_inter();
+        s.total_marks();
+    }
 }
-}
+
 
 //5 NAMES OF STUDENTS//
 
